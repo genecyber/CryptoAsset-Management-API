@@ -1,7 +1,7 @@
 var {describe, it} = require('mocha')
 const chai = require('chai')
 const expect = chai.expect
-const sweep = require('../index')
+const sweep = require('../xcp')
 const mocks = require('./mocks')
 
 describe('suite', ()=>{
@@ -185,7 +185,7 @@ describe('suite', ()=>{
 
 describe('signer', ()=>{
     var signer = require('../lib/signer')
-    it.only('signs transaction using signer', (done)=>{
+    it('signs transaction using signer', (done)=>{
         var keyHex = "L49W1QHPmq5urH4Xb5A9MTgNa2Bo8JetCbnE2wECaLoLKnUrL2Wg"
         sweep.createTransaction("1D15HWkr7jU9YaMSFAXFrjVtUAeVFSr7Et","1D15HWkr7jU9YaMSFAXFrjVtUAeVFSr7Et", "COVALTEST", "1", (transactionObject)=>{
             signer.signTransaction(transactionObject.transaction, keyHex, (signed)=>{
