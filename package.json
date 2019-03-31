@@ -2,7 +2,7 @@
   "name": "sweep",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "xcp.js",
   "scripts": {
     "test": "mocha test",
     "build": "browserify public/src.js -o public/bundle.js"
