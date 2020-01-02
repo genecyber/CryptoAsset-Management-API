@@ -1,1 +1,15 @@
 <script src="./bundle.js"></script>
+<p>
+    signer.xcp.createTransaction("1GyoHQxxxxxxxxxxxxxx", "19cCGRb5XLuxxxxxxxxxxxxx", "COVALC", "712000", (transactionObject)=>{
+        if (transactionObject.transaction._inputAmount) {
+            signer.xcp.signTransaction(transactionObject.transaction, "PrivKEY", (signed)=>{
+                console.log("signed")
+                console.log(signed.uncheckedSerialize())
+                signer.xcp.pushTransactionHex(signed.uncheckedSerialize(), (bodies)=>{
+                    console.log("pushed")
+                    console.log(bodies)
+                })
+            })
+        }
+    })
+</p>
