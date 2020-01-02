@@ -1,1 +1,3 @@
 node_modules
+.Flow/node_modules
+p/tmp/flow.package
