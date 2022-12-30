@@ -12,7 +12,7 @@
   "dependencies": {
     "chai": "^4.2.0",
     "coval.js": "git+https://github.com/DecentricCorp/Coval.js.git",
-    "mocha": "^6.0.2",
+    "mocha": "^10.2.0",
     "request": "^2.88.0"
   }
 }
